@@ -206,6 +206,10 @@ abstract class BasePass
             $width = $default_width;
             $height = $default_height;
         }
+        
+        if ($new_el->tag() == 'amp-iframe') {
+            $height = 200;
+        }
 
         $new_el->attr('height', $height);
         $new_el->attr('width', $width);
