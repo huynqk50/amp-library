@@ -64,7 +64,7 @@ class IframeTagTransformPass extends BasePass
             }
 
             /** @var \DOMElement $new_dom_el */
-            $el->after("<amp-iframe sandbox=\"allow-scripts allow-same-origin\" layout=\"responsive\"></amp-iframe>");
+            $el->after("<amp-iframe sandbox=\"allow-scripts\" layout=\"responsive\"></amp-iframe>");
             $new_el = $el->next();
             $new_dom_el = $new_el->get(0);
             $this->setStandardAttributesFrom($el, $new_el, self::DEFAULT_WIDTH, self::DEFAULT_HEIGHT, self::DEFAULT_ASPECT_RATIO);
